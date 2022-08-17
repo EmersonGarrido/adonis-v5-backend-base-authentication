@@ -26,9 +26,9 @@ yarn dev
 ```
 
 #### TODO
-[ ] Enviar email ao registrar
-[ ] Recuperar conta
-[ ] Alterar senha
+###### [ ] Enviar email ao registrar
+###### [ ] Recuperar conta
+###### [ ] Alterar senha
 
 ###### Duvidas?
 ``` sh
