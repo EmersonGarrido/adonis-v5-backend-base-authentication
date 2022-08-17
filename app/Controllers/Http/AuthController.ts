@@ -27,14 +27,16 @@ export default class AuthController {
   }
 
   public async store({ request }: HttpContextContract) {
-    const { fullName, displayName, email, password, phone_number } = request.only(['fullName', 'displayName', 'email', 'password', 'phone_number']);
+    const { fullName, displayName, email, password, phoneNumber } = request.only(['fullName', 'displayName', 'email', 'password', 'phoneNumber']);
 
     const user = await User.create({
       fullName: fullName,
       displayName: displayName,
       email: email,
       password: password,
-      phoneNumber: phone_number,
+      phoneNumber: phoneNumber,
+      authType: 'Bearer',
+      status: 'pending',
     });
 
     return {
