@@ -12,7 +12,7 @@ Route.group(() => {
    Route.group(() => {
      Route.post("/login", 'AuthController.login');
      Route.get("/session", 'AuthController.session').middleware('auth:api_user');
-     Route.post("/logout", 'AuthController.logout').middleware('auth:api_user');
+     Route.get("/logout", 'AuthController.logout').middleware('auth:api_user');
      Route.post("/register", 'AuthController.store');
    }).prefix('/user');
 
