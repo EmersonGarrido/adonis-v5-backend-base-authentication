@@ -14,8 +14,6 @@ export default class Users extends BaseSchema {
       table.string('email', 255).notNullable()
       table.string('password', 180).notNullable()
       table.string('status').nullable()
-      table.string('token')
-      table.date('token_created_at')
       table.timestamps(true)
     })
   }
