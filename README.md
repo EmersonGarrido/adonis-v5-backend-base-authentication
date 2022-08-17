@@ -4,10 +4,10 @@
 ##### [X] Rota para Desconectar 
 ##### [X] Rota para pegar Sessão do usuario logado 
 ``` sh 
-POST http://localhost:3333/user/register
-POST http://localhost:3333/user/login
-GET http://localhost:3333/user/logout
-GET http://localhost:3333/user/session
+POST http://localhost:3333/api/v1/user/register
+POST http://localhost:3333/api/v1/user/login
+GET http://localhost:3333/api/v1/user/logout
+GET http://localhost:3333/api/v1/user/session
  ```
 
 ## Instalaçāo

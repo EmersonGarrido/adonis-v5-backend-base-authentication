@@ -5,8 +5,17 @@ Route.get('/', async () => {
 })
 
 Route.group(() => {
-  Route.post("/login", 'AuthController.login');
-  Route.get("/session", 'AuthController.session').middleware('auth:api_user');
-  Route.post("/logout", 'AuthController.logout').middleware('auth:api_user');
-  Route.post("/register", 'AuthController.store');
-}).prefix('/user')
+
+  Route.group(() => {
+
+   // Routes for user account
+   Route.group(() => {
+     Route.post("/login", 'AuthController.login');
+     Route.get("/session", 'AuthController.session').middleware('auth:api_user');
+     Route.post("/logout", 'AuthController.logout').middleware('auth:api_user');
+     Route.post("/register", 'AuthController.store');
+   }).prefix('/user');
+
+ }).prefix('/v1')
+
+}).prefix('/api');
